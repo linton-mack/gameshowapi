@@ -16,3 +16,7 @@
 /Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/obj/Debug/netcoreapp3.0/GameShowApi.RazorTargetAssemblyInfo.cache
 /Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/obj/Debug/netcoreapp3.0/GameShowApi.dll
 /Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/obj/Debug/netcoreapp3.0/GameShowApi.pdb
+/Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/bin/Debug/netcoreapp3.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyModel.dll
+/Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/bin/Debug/netcoreapp3.0/Newtonsoft.Json.dll
+/Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/obj/Debug/netcoreapp3.0/GameShowApi.csproj.CopyComplete
