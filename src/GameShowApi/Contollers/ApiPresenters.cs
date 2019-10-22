@@ -23,5 +23,20 @@ namespace GameShowApi
         {
             return new JsonResult(myData.Presenters);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetPresentersById(string id)
+        {
+            var presenter = myData.GetPresentersById(id);
+            if (presenter != null)
+            {
+                return Ok(presenter);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
     }
 }

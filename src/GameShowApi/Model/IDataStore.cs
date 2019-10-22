@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using GameShowApi.Dto;
-// using GameShowApi.Contollers;
 
 namespace GameShowApi.Model
 {
@@ -8,7 +7,7 @@ namespace GameShowApi.Model
     {
         List<PresentersDto> Presenters { get; }
 
-        // List<PresentersDto> GetPresenters();
+        PresentersDto GetPresentersById(string id);
     }
 }
 
