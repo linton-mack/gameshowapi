@@ -8,6 +8,7 @@ namespace GameShowApi.Model
         List<PresentersDto> Presenters { get; }
 
         PresentersDto GetPresentersById(string id);
+        PresentersDto AddNewPresenter(PresenterCreationDTO newPresenter);
     }
 }
 

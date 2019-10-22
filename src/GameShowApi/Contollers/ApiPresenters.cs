@@ -38,5 +38,13 @@ namespace GameShowApi
             }
         }
 
+        [HttpPost("add")]
+        public IActionResult PostNewPresenter([FromBody] PresenterCreationDTO newPresenter)
+        {
+            Console.WriteLine("fudge cicles");
+            PresentersDto createdPresenter = myData.AddNewPresenter(newPresenter);
+            return CreatedAtAction(nameof(GetPresentersById), new {id = createdPresenter.Id}, createdPresenter);
+        }
+
     }
 }

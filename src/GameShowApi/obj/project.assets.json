@@ -3872,23 +3872,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/jimhiggins/.nuget/packages/": {},
+    "/Users/linton/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/src/GameShowApi/GameShowApi.csproj",
+      "projectUniqueName": "/Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/GameShowApi.csproj",
       "projectName": "GameShowApi",
-      "projectPath": "/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/src/GameShowApi/GameShowApi.csproj",
-      "packagesPath": "/Users/jimhiggins/.nuget/packages/",
-      "outputPath": "/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/src/GameShowApi/obj/",
+      "projectPath": "/Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/GameShowApi.csproj",
+      "packagesPath": "/Users/linton/.nuget/packages/",
+      "outputPath": "/Users/linton/Desktop/northcoders/c/gameshowapi/src/GameShowApi/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/jimhiggins/.nuget/NuGet/NuGet.Config"
+        "/Users/linton/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
