@@ -202,3 +202,7 @@
 /Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/tests/obj/Debug/netcoreapp3.0/tests.AssemblyInfoInputs.cache
 /Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/tests/obj/Debug/netcoreapp3.0/tests.AssemblyInfo.cs
 /Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/tests/obj/Debug/netcoreapp3.0/tests.csproj.CopyComplete
+/Users/linton/Desktop/northcoders/c/gameshowapi/tests/bin/Debug/netcoreapp3.0/Castle.Core.dll
+/Users/linton/Desktop/northcoders/c/gameshowapi/tests/bin/Debug/netcoreapp3.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/linton/Desktop/northcoders/c/gameshowapi/tests/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyModel.dll
+/Users/linton/Desktop/northcoders/c/gameshowapi/tests/bin/Debug/netcoreapp3.0/Moq.dll

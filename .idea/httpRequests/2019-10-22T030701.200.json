@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "name": "Bibble",
+    "birthYear": 1985,
+    "deathYear": 2007
+  },
+  {
+    "id": "2",
+    "name": "Babble",
+    "birthYear": 1930,
+    "deathYear": 1935
+  }
+]

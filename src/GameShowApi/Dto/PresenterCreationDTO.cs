@@ -13,7 +13,7 @@ namespace GameShowApi.Dto
         
         public PresenterCreationDTO() {}
         
-        [Required]
+        [Required (ErrorMessage = "error")]
         public string Name { get; set; }
         public int BirthYear { get; set; }
         public int DeathYear { get; set; }

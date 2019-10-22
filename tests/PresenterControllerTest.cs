@@ -27,5 +27,30 @@ namespace tests
             // Asset
             Assert.IsType<OkObjectResult>(result);
         }
+
+        [Fact]
+        public void PostToCreatePresenterIsValid()
+        {
+            var mockNewPresenter = new PresenterCreationDTO("Happy Davies", 1990, 2020);
+            var mockCreatedPresenter = new PresentersDto("3", "Happy Davies", 1990, 2020);
+            var mockRepo = new Mock<IDataStore>();
+            mockRepo.Setup((p) => p.AddNewPresenter(mockNewPresenter)).Returns(mockCreatedPresenter);
+
+            var sut = new ApiPresentersController(mockRepo.Object);
+            IActionResult result = sut.PostNewPresenter(mockNewPresenter);
+            Assert.IsType<CreatedAtActionResult>(result);
+        }
+
+        [Fact]
+        public void PostToCreatePresenterIsInvalid()
+        {
+            var mockNewPresenter = new PresenterCreationDTO( null,1990, 2020);
+            var mockRepo = new Mock<IDataStore>();
+            var sut = new ApiPresentersController(mockRepo.Object);
+            sut.ModelState.AddModelError("error", "Oops something went wrong");
+            IActionResult result = sut.PostNewPresenter(mockNewPresenter);
+            Assert.IsType<BadRequestObjectResult>(result);
+
+        }
     }
 }
