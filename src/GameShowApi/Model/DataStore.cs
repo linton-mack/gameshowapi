@@ -14,9 +14,16 @@ namespace GameShowApi.Model
                 new PresentersDto("1", "Bibble", 1985, 2007),
                 new PresentersDto("2", "Babble", 1930, 1935)
             };
+
+            GameShows = new List<GameShowDto>()
+            {
+                new GameShowDto("1","The Generation Game", "BBC1", 1971)
+
+            };
         }
 
         public List<PresentersDto> Presenters { get; }
+        public List<GameShowDto> GameShows { get; }
 
         public PresentersDto GetPresentersById(string id)
         {
@@ -33,6 +40,11 @@ namespace GameShowApi.Model
 
             Presenters.Add(presenterToAdd);
             return presenterToAdd;
+        }
+
+        public GameShowDto GetGameShowsById(string id)
+        {
+            return GameShows.FirstOrDefault((show) => show.Id == id);
         }
     }
 }

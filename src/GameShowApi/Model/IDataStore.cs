@@ -6,9 +6,12 @@ namespace GameShowApi.Model
     public interface IDataStore
     {
         List<PresentersDto> Presenters { get; }
+        List<GameShowDto> GameShows { get; }
 
         PresentersDto GetPresentersById(string id);
         PresentersDto AddNewPresenter(PresenterCreationDTO newPresenter);
+
+        GameShowDto GetGameShowsById(string id);
     }
 }
 
