@@ -28,5 +28,18 @@ namespace tests
 
         }
 
+        [Fact]
+        public void PostToCreateGameShowIsValid()
+        {
+            var mockNewGameShow = new GameShowCreationDto("Bulls Eye", "ITV", 1924);
+            var mockCreatedGameShow = new GameShowDto("2", "Bulls Eye", "ITV", 1924);
+            var mockRepo = new Mock<IDataStore>();
+            mockRepo.Setup((p) => p.AddNewGameShow(mockNewGameShow)).Returns(mockCreatedGameShow);
+
+            var sut = new GameShowsController(mockRepo.Object);
+            IActionResult result = sut.PostNewGameShow(mockNewGameShow);
+            Assert.IsType<CreatedAtActionResult>(result);
+        }
+
     }
 }

@@ -46,5 +46,15 @@ namespace GameShowApi.Model
         {
             return GameShows.FirstOrDefault((show) => show.Id == id);
         }
+
+        public GameShowDto AddNewGameShow(GameShowCreationDto newGameShow)
+        {
+            int id = Int32.Parse(GameShows.Max((gameshow) => gameshow.Id)) + 1;
+
+            GameShowDto gameShowToAdd = new GameShowDto(id.ToString(), newGameShow.Title, newGameShow.Channel, newGameShow.Year);
+
+            GameShows.Add(gameShowToAdd);
+            return gameShowToAdd;
+        }
     }
 }

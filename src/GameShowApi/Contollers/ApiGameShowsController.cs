@@ -37,5 +37,18 @@ namespace GameShowApi
                 return NotFound();
             }
         }
+        [HttpPost("add")]
+        public IActionResult PostNewGameShow([FromBody] GameShowCreationDto newGameShow)
+        {
+            GameShowDto createdGameShow = myData.AddNewGameShow(newGameShow);
+            if (ModelState.IsValid)
+            {
+                return CreatedAtAction(nameof(GetGameShowsById), new { id = createdGameShow.Id }, createdGameShow);
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+        }
     }
 }
