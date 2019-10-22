@@ -1,23 +1,27 @@
 using System;
 using System.Collections.Generic;
 using GameShowApi.Dto;
+using GameShowApi.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
 
-namespace GameShowApi {
-    [Route ("api")]
-    public class ApiPresenters : Controller {
-        [HttpGet ("presenters")]
-        public IActionResult GetPresenters () {
-            var presenters = new List<PresentersDto> () {
-                new PresentersDto (1, "Bibble", 1985, 2007)
-            };
+namespace GameShowApi
+{
 
-            if (presenters == null) {
-                return NotFound ();
-            } else {
-                return Ok (presenters);
-            }
+    [Route("api/presenters")]
+    public class ApiPresentersController : Controller
+    {
+
+        private IDataStore myData;
+        public ApiPresentersController(IDataStore dataStore)
+        {
+            myData = dataStore;
+        }
+
+        [HttpGet()]
+        public JsonResult GetPresenters()
+        {
+            return new JsonResult(myData.Presenters);
         }
     }
 }

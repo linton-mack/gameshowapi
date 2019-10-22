@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using GameShowApi.Model;
 
 namespace GameShowApi
 {
@@ -17,6 +18,8 @@ namespace GameShowApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IDataStore, DataStore>();
+
             services.AddMvc((MvcOptions) =>
             {
                 MvcOptions.EnableEndpointRouting = false;

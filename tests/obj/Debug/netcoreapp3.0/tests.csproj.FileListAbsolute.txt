@@ -98,3 +98,5 @@
 /Users/linton/Desktop/northcoders/c/gameshowapi/tests/obj/Debug/netcoreapp3.0/tests.csproj.CopyComplete
 /Users/linton/Desktop/northcoders/c/gameshowapi/tests/obj/Debug/netcoreapp3.0/tests.dll
 /Users/linton/Desktop/northcoders/c/gameshowapi/tests/obj/Debug/netcoreapp3.0/tests.pdb
+/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/tests/obj/Debug/netcoreapp3.0/tests.dll
+/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/tests/obj/Debug/netcoreapp3.0/tests.pdb
