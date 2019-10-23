@@ -15,10 +15,8 @@ namespace tests
             //Arrange
             var mockRepo = new Mock<IDataStore>();
             PresentersDto mockPresenter = new PresentersDto("1", "Bibble", 1985, 2007);
-
             mockRepo.Setup((repo) => repo.GetPresentersById("2"))
             .Returns(mockPresenter);
-
             var sut = new ApiPresentersController(mockRepo.Object);
 
             //Act
@@ -43,7 +41,7 @@ namespace tests
         [Fact]
         public void PostToCreatePresenterIsInvalid()
         {
-            var mockNewPresenter = new PresenterCreationDTO( null,1990, 2020);
+            var mockNewPresenter = new PresenterCreationDTO(null, 1990, 2020);
             var mockRepo = new Mock<IDataStore>();
             var sut = new ApiPresentersController(mockRepo.Object);
             sut.ModelState.AddModelError("error", "Oops something went wrong");

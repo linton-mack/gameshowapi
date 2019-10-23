@@ -9,11 +9,11 @@ namespace GameShowApi
 {
 
     [Route("api/gameshows")]
-    public class GameShowsController : Controller
+    public class ApiGameShowsController : Controller
     {
 
         private IDataStore myData;
-        public GameShowsController(IDataStore dataStore)
+        public ApiGameShowsController(IDataStore dataStore)
         {
             myData = dataStore;
         }

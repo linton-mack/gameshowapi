@@ -15,11 +15,9 @@ namespace tests
             //Arrange
             var mockRepo = new Mock<IDataStore>();
             GameShowDto mockGameShow = new GameShowDto("1", "The Generation Game", "BBC1", 1971);
-
             mockRepo.Setup((repo) => repo.GetGameShowsById("1"))
             .Returns(mockGameShow);
-
-            var sut = new GameShowsController(mockRepo.Object);
+            var sut = new ApiGameShowsController(mockRepo.Object);
 
             //Act
             IActionResult result = sut.GetGameShowsById("1");
@@ -36,9 +34,20 @@ namespace tests
             var mockRepo = new Mock<IDataStore>();
             mockRepo.Setup((p) => p.AddNewGameShow(mockNewGameShow)).Returns(mockCreatedGameShow);
 
-            var sut = new GameShowsController(mockRepo.Object);
+            var sut = new ApiGameShowsController(mockRepo.Object);
             IActionResult result = sut.PostNewGameShow(mockNewGameShow);
             Assert.IsType<CreatedAtActionResult>(result);
+        }
+
+        [Fact]
+        public void PostToCreateGameShowIsInvalid()
+        {
+            var mockNewGameShow = new GameShowCreationDto(null, "BBC1", 1995);
+            var mockRepo = new Mock<IDataStore>();
+            var sut = new ApiGameShowsController(mockRepo.Object);
+            sut.ModelState.AddModelError("Error", "Oh no something went wrong creating that!");
+            IActionResult result = sut.PostNewGameShow(mockNewGameShow);
+            Assert.IsType<BadRequestObjectResult>(result);
         }
 
     }
