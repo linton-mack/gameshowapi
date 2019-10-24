@@ -30,6 +30,12 @@ namespace GameShowApi.Model
             return Presenters.FirstOrDefault((presenter) => presenter.Id == id);
         }
 
+        public PresentersDto UpdatePresenterName(string id)
+        {
+            return GetPresentersById(id);
+
+        }
+
         public PresentersDto AddNewPresenter(PresenterCreationDTO newPresenter)
         {
             int id = Int32.Parse(Presenters.Max((presenter) => presenter.Id)) + 1;

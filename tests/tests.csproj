@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\src\GameShowApi\GameShowApi.csproj" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>

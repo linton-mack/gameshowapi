@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using GameShowApi.Dto;
 using GameShowApi.Model;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
 
@@ -44,7 +45,7 @@ namespace GameShowApi
             PresentersDto createdPresenter = myData.AddNewPresenter(newPresenter);
             if (ModelState.IsValid)
             {
-                return CreatedAtAction(nameof(GetPresentersById), new {id = createdPresenter.Id}, createdPresenter);
+                return CreatedAtAction(nameof(GetPresentersById), new { id = createdPresenter.Id }, createdPresenter);
             }
             else
             {
@@ -52,5 +53,24 @@ namespace GameShowApi
             }
         }
 
+        [HttpPatch("patch/{id}")]
+        public IActionResult PatchPresenters([FromBody] JsonPatchDocument<PresentersDto> patchDoc, string id)
+        {
+            if (patchDoc != null)
+            {
+                var presenter = myData.GetPresentersById(id);
+                patchDoc.ApplyTo(presenter, ModelState);
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+                return new ObjectResult(presenter);
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+        }
     }
 }

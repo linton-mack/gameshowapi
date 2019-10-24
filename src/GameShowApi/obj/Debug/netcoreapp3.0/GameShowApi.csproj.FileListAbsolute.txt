@@ -42,3 +42,6 @@
 /Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/src/GameShowApi/obj/Debug/netcoreapp3.0/GameShowApi.csproj.CopyComplete
 /Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/src/GameShowApi/obj/Debug/netcoreapp3.0/GameShowApi.dll
 /Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/src/GameShowApi/obj/Debug/netcoreapp3.0/GameShowApi.pdb
+/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/src/GameShowApi/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/src/GameShowApi/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/src/GameShowApi/bin/Debug/netcoreapp3.0/Newtonsoft.Json.Bson.dll

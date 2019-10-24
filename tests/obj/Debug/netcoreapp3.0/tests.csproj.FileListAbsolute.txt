@@ -206,3 +206,6 @@
 /Users/linton/Desktop/northcoders/c/gameshowapi/tests/bin/Debug/netcoreapp3.0/Microsoft.DotNet.PlatformAbstractions.dll
 /Users/linton/Desktop/northcoders/c/gameshowapi/tests/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyModel.dll
 /Users/linton/Desktop/northcoders/c/gameshowapi/tests/bin/Debug/netcoreapp3.0/Moq.dll
+/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/tests/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/tests/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/jimhiggins/academy/Code/northCodersC#/gameshowapi/tests/bin/Debug/netcoreapp3.0/Newtonsoft.Json.Bson.dll

@@ -10,10 +10,13 @@ namespace GameShowApi.Model
 
         PresentersDto GetPresentersById(string id);
         PresentersDto AddNewPresenter(PresenterCreationDTO newPresenter);
+        // PresentersDto UpdatePresenterName(string id);
 
         GameShowDto GetGameShowsById(string id);
 
         GameShowDto AddNewGameShow(GameShowCreationDto newGameShow);
+
+
     }
 }
 

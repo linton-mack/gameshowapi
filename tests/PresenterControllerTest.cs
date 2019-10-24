@@ -47,7 +47,22 @@ namespace tests
             sut.ModelState.AddModelError("error", "Oops something went wrong");
             IActionResult result = sut.PostNewPresenter(mockNewPresenter);
             Assert.IsType<BadRequestObjectResult>(result);
+        }
 
+        [Fact]
+        public void PatchToUpdatePresenterName()
+        {
+            var mockRepo = new Mock<IDataStore>();
+            PresentersDto mockPresenter = new PresentersDto("1", "Bibble", 1985, 2007);
+            PresentersDto mockCreatedPresenter = new PresentersDto("1", "Bob", 1985, 2007);
+            
+            mockRepo.Setup((patch) => patch.GetPresentersById("1"))
+            .Returns(mockCreatedPresenter);
+
+            var sut = new ApiPresentersController(mockRepo.Object);
+
+            IActionResult result = sut.GetPresentersById("1");
+            Assert.IsType<OkObjectResult>(result);
         }
     }
 }

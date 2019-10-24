@@ -19,10 +19,11 @@ namespace GameShowApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IDataStore, DataStore>();
-
+            services.AddControllersWithViews().AddNewtonsoftJson();
             services.AddMvc((MvcOptions) =>
             {
                 MvcOptions.EnableEndpointRouting = false;
+
             }
             );
         }
